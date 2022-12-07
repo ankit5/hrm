@@ -1,3 +1,173 @@
 [2022-12-07T05:20:43.260599+00:00] orangehrm.ERROR:  [] []
 [2022-12-07T05:20:43.263365+00:00] orangehrm.ERROR: #0 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\vendor\symfony\event-dispatcher\EventDispatcher.php(230): OrangeHRM\Time\Subscriber\TimesheetPeriodSubscriber->onRequestEvent(Object(Symfony\Component\HttpKernel\Event\RequestEvent), 'kernel.request', Object(OrangeHRM\Framework\Event\EventDispatcher)) #1 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\vendor\symfony\event-dispatcher\EventDispatcher.php(59): Symfony\Component\EventDispatcher\EventDispatcher->callListeners(Array, 'kernel.request', Object(Symfony\Component\HttpKernel\Event\RequestEvent)) #2 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\vendor\symfony\http-kernel\HttpKernel.php(128): Symfony\Component\EventDispatcher\EventDispatcher->dispatch(Object(Symfony\Component\HttpKernel\Event\RequestEvent), 'kernel.request') #3 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\vendor\symfony\http-kernel\HttpKernel.php(74): Symfony\Component\HttpKernel\HttpKernel->handleRaw(Object(OrangeHRM\Framework\Http\Request), 1) #4 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\lib\framework\Framework.php(157): Symfony\Component\HttpKernel\HttpKernel->handle(Object(OrangeHRM\Framework\Http\Request), 1, true) #5 C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request)) #6 {main} [] []
 [07-Dec-2022 05:36:29 UTC] PHP Warning:  rename(C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\config\proxy\__CG__OrangeHRMEntityEmployee.php.6390265db431f6.49199106,C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\config\proxy\__CG__OrangeHRMEntityEmployee.php): Access is denied (code: 5) in C:\Users\Ankit Verma\Downloads\orangehrm-5.2\orangehrm-5.2\src\vendor\doctrine\common\lib\Doctrine\Common\Proxy\ProxyGenerator.php on line 345
+[2022-12-07T06:38:48.985033+00:00] orangehrm.ERROR: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) [] []
+[2022-12-07T06:38:48.995731+00:00] orangehrm.ERROR: #0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1814): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL) #1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1757): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL) #2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(343): Doctrine\DBAL\Connection->convertException(Object(Doctrine\DBAL\Driver\PDO\Exception)) #3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect() #4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion() #5 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform() #6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform() #7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct() #8 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance() #9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager() #10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...') #11 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1) #12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...') #13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager() #14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...') #15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings') #16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings') #17 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting() #18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request)) #19 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request)) #20 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request)) #21 {main} [] []
+[07-Dec-2022 06:38:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php:28
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php(28): PDO->__construct('mysql:host=loca...', 'ankitver_drupal', '8y{a(o-IrhQ~', Array)
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(341): Doctrine\DBAL\Driver\PDO\MySQL\Driver->connect(Array)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#5 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#8 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#11 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#17 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#20 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:30
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php(34): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(341): Doctrine\DBAL\Driver\PDO\MySQL\Driver->connect(Array)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#5 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#8 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#11 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#17 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#20 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:103
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1814): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL)
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1757): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(343): Doctrine\DBAL\Connection->convertException(Object(Doctrine\DBAL\Driver\PDO\Exception))
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#5 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#8 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#11 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#17 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#20 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#21 {main}
+
+Next OrangeHRM\Core\Exception\DaoException: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php:72
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#1 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#2 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#3 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#4 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#5 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#6 {main}
+  thrown in D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php on line 72
+[2022-12-07T06:38:50.481918+00:00] orangehrm.ERROR: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) [] []
+[2022-12-07T06:38:50.482820+00:00] orangehrm.ERROR: #0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1814): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL) #1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1757): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL) #2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(343): Doctrine\DBAL\Connection->convertException(Object(Doctrine\DBAL\Driver\PDO\Exception)) #3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect() #4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion() #5 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform() #6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform() #7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct() #8 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance() #9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager() #10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...') #11 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1) #12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...') #13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager() #14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...') #15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings') #16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings') #17 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting() #18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request)) #19 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request)) #20 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request)) #21 {main} [] []
+[07-Dec-2022 06:38:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php:28
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php(28): PDO->__construct('mysql:host=loca...', 'ankitver_drupal', '8y{a(o-IrhQ~', Array)
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(341): Doctrine\DBAL\Driver\PDO\MySQL\Driver->connect(Array)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#5 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#8 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#11 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#17 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#20 {main}
+
+Next Doctrine\DBAL\Driver\PDO\Exception: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\Exception.php:30
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\PDO\MySQL\Driver.php(34): Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(341): Doctrine\DBAL\Driver\PDO\MySQL\Driver->connect(Array)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#5 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#8 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#11 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#17 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#20 {main}
+
+Next Doctrine\DBAL\Exception\ConnectionException: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Driver\API\MySQL\ExceptionConverter.php:103
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1814): Doctrine\DBAL\Driver\API\MySQL\ExceptionConverter->convert(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL)
+#1 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(1757): Doctrine\DBAL\Connection->handleDriverException(Object(Doctrine\DBAL\Driver\PDO\Exception), NULL)
+#2 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(343): Doctrine\DBAL\Connection->convertException(Object(Doctrine\DBAL\Driver\PDO\Exception))
+#3 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(405): Doctrine\DBAL\Connection->connect()
+#4 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(367): Doctrine\DBAL\Connection->getDatabasePlatformVersion()
+#5 D:\Projects\orangehrm-5.2\src\vendor\doctrine\dbal\src\Connection.php(284): Doctrine\DBAL\Connection->detectDatabasePlatform()
+#6 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(78): Doctrine\DBAL\Connection->getDatabasePlatform()
+#7 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(104): OrangeHRM\ORM\Doctrine->__construct()
+#8 D:\Projects\orangehrm-5.2\src\lib\orm\Doctrine.php(114): OrangeHRM\ORM\Doctrine::getInstance()
+#9 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(1093): OrangeHRM\ORM\Doctrine::getEntityManager()
+#10 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(608): Symfony\Component\DependencyInjection\ContainerBuilder->createService(Object(Symfony\Component\DependencyInjection\Definition), Array, true, 'doctrine.entity...')
+#11 D:\Projects\orangehrm-5.2\src\vendor\symfony\dependency-injection\ContainerBuilder.php(553): Symfony\Component\DependencyInjection\ContainerBuilder->doGet('doctrine.entity...', 1)
+#12 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerTrait.php(34): Symfony\Component\DependencyInjection\ContainerBuilder->get('doctrine.entity...')
+#13 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Traits\ORM\EntityManagerHelperTrait.php(42): OrangeHRM\Core\Dao\BaseDao->getEntityManager()
+#14 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php(64): OrangeHRM\Core\Dao\BaseDao->getRepository('OrangeHRM\\Entit...')
+#15 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#16 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#17 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#18 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#19 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#20 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#21 {main}
+
+Next OrangeHRM\Core\Exception\DaoException: An exception occurred in the driver: SQLSTATE[HY000] [1045] Access denied for user 'ankitver_drupal'@'localhost' (using password: YES) in D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php:72
+Stack trace:
+#0 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(136): OrangeHRM\Core\Dao\ConfigDao->getValue('ldap_settings')
+#1 D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Service\ConfigService.php(505): OrangeHRM\Core\Service\ConfigService->_getConfigValue('ldap_settings')
+#2 D:\Projects\orangehrm-5.2\src\plugins\orangehrmLDAPAuthenticationPlugin\config\LDAPAuthenticationPluginConfiguration.php(53): OrangeHRM\Core\Service\ConfigService->getLDAPSetting()
+#3 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(138): LDAPAuthenticationPluginConfiguration->initialize(Object(OrangeHRM\Framework\Http\Request))
+#4 D:\Projects\orangehrm-5.2\src\lib\framework\Framework.php(155): OrangeHRM\Framework\Framework->configurePlugins(Object(OrangeHRM\Framework\Http\Request))
+#5 D:\Projects\orangehrm-5.2\web\index.php(42): OrangeHRM\Framework\Framework->handleRequest(Object(OrangeHRM\Framework\Http\Request))
+#6 {main}
+  thrown in D:\Projects\orangehrm-5.2\src\plugins\orangehrmCorePlugin\Dao\ConfigDao.php on line 72
