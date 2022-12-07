@@ -27,7 +27,7 @@ class Conf
 
     public function __construct()
     {
-        $this->dbHost = 'localhost';
+       /* $this->dbHost = 'localhost';
         $this->dbPort = '3306';
         if (defined('ENVIRONMENT') && ENVIRONMENT == 'test') {
             $prefix = defined('TEST_DB_PREFIX') ? TEST_DB_PREFIX : '';
@@ -36,9 +36,9 @@ class Conf
             $this->dbName = 'orange';
         }
         $this->dbUser = 'root';
-        $this->dbPass = 'admin';
+        $this->dbPass = 'admin';*/
 
-         /*$this->dbHost = 'localhost';
+      $this->dbHost = 'localhost';
         $this->dbPort = '3306';
         if (defined('ENVIRONMENT') && ENVIRONMENT == 'test') {
             $prefix = defined('TEST_DB_PREFIX') ? TEST_DB_PREFIX : '';
@@ -47,7 +47,7 @@ class Conf
             $this->dbName = 'ankitver_orangehrm';
         }
         $this->dbUser = 'ankitver_drupal';
-        $this->dbPass = '8y{a(o-IrhQ~';*/
+        $this->dbPass = '8y{a(o-IrhQ~';
     }
 
     /**
