@@ -33,10 +33,10 @@ class Conf
             $prefix = defined('TEST_DB_PREFIX') ? TEST_DB_PREFIX : '';
             $this->dbName = $prefix . 'test_orange';
         } else {
-            $this->dbName = 'orange';
+            $this->dbName = 'ankitver_orangehrm';
         }
-        $this->dbUser = 'root';
-        $this->dbPass = 'admin';
+        $this->dbUser = 'ankitver_drupal';
+        $this->dbPass = '8y{a(o-IrhQ~';
     }
 
     /**
